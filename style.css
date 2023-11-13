@@ -1,0 +1,308 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+}
+.container{
+    margin: auto 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template: 100px 583px/400px 890px;
+}
+.header{
+    padding-top: 8px;
+    background-color: #e2e8f0;
+    grid-area:1/1/2/3;
+    display: grid;
+    grid-template-columns: repeat(2,440px) ;
+}
+.logo{
+    grid-column:1/2 ;
+    display: grid;
+    grid-template-columns: 100px 200px;
+}
+.part1{
+    margin: 18px 36px;
+    grid-column: 1/2;
+}
+.part2{
+    font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    margin: 30px 16px;
+    grid-column: 2/3;
+    color: #172554;
+}
+.setting{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3,60px);
+    margin: 18px 620px;
+    column-gap: 8px;
+}
+.logo-setting{
+    margin-top: 4px;
+    grid-column: 1/2;
+}
+.app{
+    margin-top: 4px;
+    grid-column: 2/3;
+}
+.account{
+    cursor: pointer;
+    grid-column: 3/4;
+    background-color: #172554;
+    color: white;
+    border-radius: 55px;
+    width: 50px;
+    height: 50px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 24px;
+}
+.info-game{
+    background-color:#1e293b;
+    grid-area:2/1/3/2;
+    display: grid;
+    grid-template-rows: 123px 450px;
+    color: white;
+}
+.xo-background{
+    grid-area:2/1/3/2;
+    background-image: url('./images/tictactoe.jpg');
+    background-size:cover;
+    background-position: center;
+}
+.playnow{
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-size: 36px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+.playnow span{
+    color: yellow;
+}
+.infoplayer{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: repeat(2,150px);
+}
+.infoplayer1{
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.infoplayer2{
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.valid{
+    grid-row: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#formulaire-game table{
+    margin: 56px 20px;
+    border-spacing: 35px;
+}
+#formulaire-game label{
+    padding-right: 12px;
+    padding-left: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: fantasy;
+    color: black;
+    background-color: #e7e5e4;
+    border-radius: 4px;
+}
+#formulaire-game button{
+    width: 50%;
+    height: 48px;
+    border-radius: 12px;
+    background-color:crimson;
+    color: white;
+    border-style:none;
+    cursor: pointer;
+    font-size: larger;
+    transition: ease-in-out 0.5s ;
+    &:hover{
+        background-color: rgb(255, 255, 255);
+        color: crimson;
+        border-style:double;
+    }
+}
+#formulaire-game input{
+    font-size: 14px;
+    font-weight: bold;
+    width: 180px;
+    height: 28px;
+    border-radius: 8px;
+    background-color:#fdf2f8;
+    color: rgb(0, 0, 0);
+    border-style:none;
+}
+.content-game{
+    background-color: #ffffff;
+    grid-area: 2/2/3/3;
+    display: grid;
+    grid-template-rows:100px 1fr;
+    box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.blockinformation{
+    padding: 10px 20px;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 180px 350px 180px;
+    gap: 50px;
+    background-color: #86efac;
+}
+.informationgame{
+    display: none;
+}
+.displayresult{
+    padding: 10px 20px;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+}
+.Result{
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 26px;
+    font-family: fantasy;
+    color: #ffffff;
+    border: solid lavender;
+}
+.displayplayer1,.displayplayer2{
+    background-color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    border-style:double;
+    border-radius: 8px;
+}
+.board{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 380px 30px;
+}
+.backgame{
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control{
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+#replay,#menu{
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #d8b4fe;
+    color: black;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-style: none;
+    transition: ease-in-out 0.5s ;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.589);
+        color: rgb(255, 255, 255);
+    }
+}
+.gameboard{
+    width: 40vh;
+    height: 40vh;
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(3,1fr);
+}
+.item{
+    border-radius: 7px;
+    padding-top: 12px;
+    border: 2px solid black;
+    background-color: #ffffff;
+    display:none;
+    margin: 2px;
+    font-size: 48px;
+    text-align: center;
+    color: #374151;
+    &:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+}
+.itemresult{
+    background-color: #f83838;
+    color:white;
+    border-radius: 56px;
+    &:hover{
+        background-color: #f83838;
+        color: white;
+        cursor: pointer;
+    }
+}
+.item1{
+    grid-area: 1/1/2/2;
+}
+.item2{
+    grid-area: 1/2/2/3;
+}
+.item3{
+    grid-area: 1/3/2/4;
+}
+.item4{
+    grid-area: 2/1/3/2;
+}
+.item5{
+    grid-area: 2/2/3/3;
+}
+.item6{
+    grid-area: 2/3/3/4;
+}
+.item7{
+    grid-area: 3/1/4/2;
+}
+.item8{
+    grid-area: 3/2/4/3;
+}
+.item9{
+    grid-area: 3/3/4/4;
+}
+.header svg{
+    fill:  #1e40af;
+    width: 8vh;
+    height: 8vh;
+}
+.setting svg{
+    cursor: pointer;
+    fill: #64748b ;
+    width: 6vh;
+    height: 6vh;
+}
